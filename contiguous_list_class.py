@@ -1,6 +1,6 @@
 class List:
     def __init__(self, maximum):
-        self.__begning = -1
+        self.__beginning = -1
         self.__ending = -1
         self.__maximum = maximum
 
@@ -9,13 +9,13 @@ class List:
             return '[]'
         else: #if the list is not empty, this formats and returns the content
             items = '['
-            for i in range(self.__begning, self.__ending):
+            for i in range(self.__beginning, self.__ending):
                 items = items + "'" + str(self.vector[i]) + "'" + ", "
             items = items + "'" + str(self.vector[self.__ending]) + "'" + ']'
             return items
 
     def isEmpty(self):
-        if self.__begning == -1 or self.__ending == -1: #checks if there is is something in the list
+        if self.__beginning == -1 or self.__ending == -1: #checks if there is is something in the list
             return True
         else:
             return False
@@ -35,7 +35,7 @@ class List:
         return False
 
     def is_index_valid(self, index):
-        if index >= self.__begning and index <= self.__ending + 1: #checks if it is a valid index to insert
+        if index >= self.__beginning and index <= self.__ending + 1: #checks if it is a valid index to insert
             return True
         else:
             return False
@@ -46,7 +46,7 @@ class List:
                 if index == 0:
                     self.vector = [None]
                     self.vector[0] = item
-                    self.__begning = 0
+                    self.__beginning = 0
                     self.__ending = 0
                     return True
                 else:
@@ -76,5 +76,5 @@ class List:
 
     def empty_list(self):
         self.vector = [None]
-        self.__begning = -1
+        self.__beginning = -1
         self.__ending = -1
