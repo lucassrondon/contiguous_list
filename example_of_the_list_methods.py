@@ -5,7 +5,7 @@ list = List(20)
 for i in range(10, -1, -1):
     list.insert(i, 0)
 
-print("LIST: ", list)
+print("LIST:", list)
 
 print("LIST LENGTH METHOD:", list.length())
 
